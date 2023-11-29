@@ -1,4 +1,6 @@
 ---
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
 import '../styles/global.css';
 const title = "Blogger";
 ---
@@ -12,13 +14,8 @@ const title = "Blogger";
 		<title>{title}</title>
 	</head>
 	<body>
-		<header>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about">about</a>
-                <a href="/blog">blog</a>
-            </nav>
-        </header>
+		<Navbar/>
 		<h1>Blogger: Home page</h1>
+		<Footer/>
 	</body>
 </html>

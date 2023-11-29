@@ -1,0 +1,25 @@
+---
+import Social from "./Social.astro";
+
+const platform = 'github'
+const username = 'harshawije-dev'
+
+const slate50 = "#f8fafc";
+ 
+---
+<style define:vars={{slate50}}>
+    .link-white {
+    color: var(--slate50);
+    text-decoration: underline;
+    margin-left: 0.5rem;
+    font-weight: 400 !important;
+  }
+</style>
+
+<footer>
+    <p>Made in love with Astro: see more projects  <a class="link-white" href={`https://github.com/${username}`} target="_blank"> @{platform}</a></p>
+    <div>
+        <small>Social Links</h2>
+        <Social platform="X" username="zetta-tech"/>
+    </div>
+</footer>

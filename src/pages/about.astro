@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
 const title = "About";
 ---
 <html lang="en">
@@ -11,18 +14,13 @@ const title = "About";
 		<title>{title}</title>
 	</head>
 	<body>
-        <header>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about">about</a>
-                <a href="/blog">blog</a>
-            </nav>
-        </header>
+        <Navbar/>
 		<h1>about</h1>
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
             Ab, facere velit quas nulla repellendus culpa itaque voluptatum alias consequatur repellat eligendi ullam, <br>
             praesentium, laudantium nam? Sit obcaecati sapiente recusandae? Reiciendis?
         </p>
+        <Footer/>
 	</body>
 </html>

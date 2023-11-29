@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
 const title = "Content";
 const posts = [
     {
@@ -60,13 +63,7 @@ const md = "1.25rem";
         </style>
 	</head>
 	<body>
-		<header>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about">about</a>
-                <a href="/blog">blog</a>
-            </nav>
-        </header>
+		<Navbar/>
 		<h1>Blog...</h1>
         <div>
             {posts.length > 0 ? 
@@ -83,6 +80,6 @@ const md = "1.25rem";
             </ul> : <p>No posts are found...</p>}
 
         </div>
-        
+        <Footer/>
 	</body>
 </html>
