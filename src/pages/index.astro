@@ -1,21 +1,10 @@
 ---
-import Footer from '../components/Footer.astro';
-import Navbar from '../components/Navbar.astro';
-import '../styles/global.css';
-const title = "Blogger";
+import BaseLayout from '../layouts/BaseLayout.astro';
+const header = "Blogger: Where the fun begins ";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Navbar/>
-		<h1>Blogger: Home page</h1>
-		<Footer/>
-	</body>
-</html>
+<BaseLayout pageHeading={header}>
+	<div>
+		<h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eum dolorum expedita nisi autem eaque unde ex nihil laboriosam! Maxime animi et consequatur at, expedita tempora optio facilis temporibus repellendus.</h5>
+	</div>
+</BaseLayout>

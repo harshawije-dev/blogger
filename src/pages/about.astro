@@ -1,26 +1,12 @@
 ---
-import '../styles/global.css';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-
-const title = "About";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const header = "About";
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-        <Navbar/>
-		<h1>about</h1>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
-            Ab, facere velit quas nulla repellendus culpa itaque voluptatum alias consequatur repellat eligendi ullam, <br>
-            praesentium, laudantium nam? Sit obcaecati sapiente recusandae? Reiciendis?
-        </p>
-        <Footer/>
-	</body>
-</html>
+
+<BaseLayout pageHeading={header}>
+	<p>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+		Ab, facere velit quas nulla repellendus culpa itaque voluptatum alias consequatur repellat eligendi ullam, <br>
+		praesentium, laudantium nam? Sit obcaecati sapiente recusandae? Reiciendis?
+	</p>
+</BaseLayout>
