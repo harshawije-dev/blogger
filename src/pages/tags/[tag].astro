@@ -5,18 +5,21 @@ export async function getStaticPaths() {
     const allPosts = await Astro.glob('../posts/*.md');
 
     return [
-        { params: { tag: "astro" }, props: {posts: allPosts}},
-        { params: { tag: "successes" }, props: {posts: allPosts}},
-        { params: { tag: "community" }, props: {posts: allPosts}},
-        { params: { tag: "blogging" }, props: {posts: allPosts}},
-        { params: { tag: "setbacks" }, props: {posts: allPosts}},
-        { params: { tag: "learning in public" }, props: {posts: allPosts}},
+        { params: { tag: "technology" }, props: {posts: allPosts}},
+        { params: { tag: "hot" }, props: {posts: allPosts}},
+        { params: { tag: "docker" }, props: {posts: allPosts}},
+        { params: { tag: "most-upvoted" }, props: {posts: allPosts}},
+        { params: { tag: "most-viewed" }, props: {posts: allPosts}},
     ];
 }
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+const filter = posts.filter((post)=> post.frontmatter.tags?.includes(tag));
 ---
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
+  <ul>
+    {filter.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul>
 </BaseLayout>
